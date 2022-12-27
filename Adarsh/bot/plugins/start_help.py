@@ -22,18 +22,15 @@ async def start(b, m):
             Var.BIN_CHANNEL,
             f"#NEW_USER: \n\nNew User [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Started !!"
         )
-    usr_cmd = m.text.split("_")[-1]
-    if usr_cmd == "/start":
-        if Var.UPDATES_CHANNEL is not None:
-            try:
-                user = await b.get_chat_member(Var.UPDATES_CHANNEL, m.chat.id)
-                if user.status == enums.ChatMemberStatus.BANNED:
-                    await b.send_message(
-                        chat_id=m.chat.id,
-                        text="**ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ../**",
-                        disable_web_page_preview=True
-                    )
-                    return
+     
+   
+       
+                    
+                       
+                       
+                        
+                    
+                   
     
               
               
