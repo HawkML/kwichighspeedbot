@@ -22,12 +22,20 @@ async def start(b, m):
             Var.BIN_CHANNEL,
             f"#NEW_USER: \n\nNew User [{m.from_user.first_name}](tg://user?id={m.from_user.id}) Started !!"
         )
-     
+     @StreamBot.on_message(filters.command(["start", "help"]))
+
+async def start(_, m: Message):
+
+    await m.reply(
+
+        f'Hi {m.from_user.mention(style="md")}, Send me a file to get an instant stream link.'
+
+    )
    
        
                     
                        
-                       
+                      
                         
                     
                    
